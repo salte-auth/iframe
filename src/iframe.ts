@@ -16,11 +16,6 @@ export class IFrame extends Handler {
       visible
     });
   }
-
-  /* istanbul ignore next */
-  private get nested() {
-    return window.self !== window.top;
-  }
 }
 
 export declare namespace IFrame {
