@@ -2,10 +2,10 @@ const common = require('./rollup.common.config.js');
 
 module.exports = (config) => {
   const browsers = [
-    // 'Chrome',
-    // 'Firefox',
-    // 'MicrosoftEdge',
-    // 'Safari',
+    'Chrome',
+    'Firefox',
+    'MicrosoftEdge',
+    'Safari',
     'Internet Explorer'
   ];
 
