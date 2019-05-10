@@ -9,14 +9,6 @@ export class IFrame extends Handler {
     return true;
   }
 
-  public connected({ action }: Handler.ConnectedOptions) {
-    if (!action || !this.nested) return;
-
-    const iframe = parent.document.querySelector('body > iframe[owner="salte-auth"]');
-
-    parent.document.body.removeChild(iframe);
-  }
-
   public open({ url, redirectUrl, visible }: IFrame.OpenOptions) {
     return Utils.Common.iframe({
       url,

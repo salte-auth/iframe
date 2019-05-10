@@ -35,31 +35,6 @@ describe('IFrame', () => {
     });
   });
 
-  describe('function(connected)', () => {
-    it('should destroy the iframe', () => {
-      sinon.stub(iframe, 'nested').get(() => true);
-
-      iframe.connected({ action: 'login' });
-
-      expect(parent.document.body.removeChild.callCount).to.equal(1);
-      expect(parent.document.body.removeChild).calledWith('world');
-    });
-
-    it(`should skip if we aren't responsible for the login`, () => {
-      iframe.connected({ action: null });
-
-      expect(parent.document.body.removeChild.callCount).to.equal(0);
-    });
-
-    it(`should skip the current window isn't in an iframe`, () => {
-      sinon.stub(iframe, 'nested').get(() => false);
-
-      iframe.connected({ action: 'login' });
-
-      expect(parent.document.body.removeChild.callCount).to.equal(0);
-    });
-  });
-
   describe('function(open)', () => {
     it('should login via an iframe', async () => {
       sinon.stub(Utils.Common, 'iframe').returns(Promise.resolve());
