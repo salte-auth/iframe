@@ -4,7 +4,7 @@
   "main": "dist/iframe.min.js",
   "module": "dist/iframe.min.mjs",
   "types": "dist/iframe.d.ts",
-  "description": "A Salte Auth provider for authenticating via IFrame!",
+  "description": "A Salte Auth handler for authenticating via IFrame!",
   "homepage": "https://github.com/salte-auth/iframe",
   "bugs": "https://github.com/salte-auth/iframe/issues",
   "contributors": [
