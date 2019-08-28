@@ -9,7 +9,7 @@ export class IFrame extends Handler {
     return true;
   }
 
-  public open({ url, redirectUrl, visible }: IFrame.OpenOptions) {
+  public open({ url, redirectUrl, visible }: IFrame.OpenOptions): Promise<object> {
     return Utils.Common.iframe({
       url,
       redirectUrl,
