@@ -14,7 +14,6 @@ describe('IFrame', () => {
   beforeEach(() => {
     sinon.stub(parent.document, 'querySelector').returns('world');
     sinon.stub(parent.document.body, 'removeChild');
-    sinon.stub(IFrame.prototype, 'clear');
 
     iframe = new IFrame();
   });
