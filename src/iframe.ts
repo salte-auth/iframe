@@ -1,4 +1,4 @@
-import { Handler, Utils } from '@salte-auth/salte-auth';
+import { Handler, Utils, OAuth2Provider, OpenIDProvider } from '@salte-auth/salte-auth';
 
 export class IFrame extends Handler {
   public get name() {
@@ -9,7 +9,7 @@ export class IFrame extends Handler {
     return true;
   }
 
-  public open({ url, redirectUrl, visible }: IFrame.OpenOptions): Promise<object> {
+  public open({ url, redirectUrl, visible }: IFrame.OpenOptions): Promise<OAuth2Provider.Validation | OpenIDProvider.Validation> {
     return Utils.Common.iframe({
       url,
       redirectUrl,
