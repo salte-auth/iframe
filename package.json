@@ -1,6 +1,7 @@
 {
   "name": "@salte-auth/iframe",
   "version": "3.0.0",
+  "browser": "dist/iframe.min.js",
   "main": "dist/iframe.min.js",
   "module": "dist/iframe.min.mjs",
   "types": "dist/iframe.d.ts",
