@@ -9,17 +9,11 @@ export class IFrame extends Handler {
     return true;
   }
 
-  public open({ url, redirectUrl, visible }: IFrame.OpenOptions): Promise<OAuth2Provider.Validation | OpenIDProvider.Validation> {
+  public open({ url, redirectUrl }: Handler.OpenOptions): Promise<OAuth2Provider.Validation | OpenIDProvider.Validation> {
     return Utils.Common.iframe({
       url,
       redirectUrl,
-      visible
+      visible: true
     });
-  }
-}
-
-export declare namespace IFrame {
-  export interface OpenOptions extends Handler.OpenOptions {
-    visible?: boolean;
   }
 }

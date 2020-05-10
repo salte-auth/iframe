@@ -40,8 +40,7 @@ describe('IFrame', () => {
 
       await iframe.open({
         url: 'https://google.com',
-        redirectUrl: 'https://github.com',
-        visible: true
+        redirectUrl: 'https://github.com'
       });
 
       expect(Utils.Common.iframe).calledWith({
