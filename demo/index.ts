@@ -3,13 +3,20 @@ import { IFrame } from '../src/iframe';
 
 const auth = new SalteAuth({
   providers: [
-    new Generic.OAuth2({
-      login: function(): string {
-        return 'https://github.com/login/oauth/authorize';
+    new Generic.OpenID({
+      login(): string {
+        return 'https://salte-os.auth0.com/authorize';
       },
 
-      clientID: 'b44780ca7678681180c9',
-      responseType: 'code'
+      logout(): string {
+        return this.url('https://salte-os.auth0.com/v2/logout', {
+          client_id: this.config.clientID,
+          returnTo: this.config.redirectUrl,
+        });
+      },
+
+      clientID: '9JTBXBREtckkFHTxTNBceewrnn7NeDd0',
+      responseType: 'id_token'
     })
   ],
 
@@ -20,17 +27,23 @@ const auth = new SalteAuth({
   ]
 });
 
-const button = document.createElement('button');
-button.innerHTML = `Login`;
-button.addEventListener('click', () => {
-  auth.login({
-    provider: 'generic.oauth2'
-  });
-});
-
-document.body.appendChild(button);
-
-auth.on('login', (error, token) => {
+auth.on('login', (error, data) => {
   if (error) console.error(error);
-  else console.log(token);
+  else console.log(data);
 });
+
+const loginButton = document.createElement('button');
+loginButton.id = 'login';
+loginButton.innerHTML = `Login`;
+loginButton.addEventListener('click', () => {
+  auth.login('generic.openid');
+});
+document.body.appendChild(loginButton);
+
+const logoutButton = document.createElement('button');
+logoutButton.id = 'logout';
+logoutButton.innerHTML = `Logout`;
+logoutButton.addEventListener('click', () => {
+  auth.logout('generic.openid');
+});
+document.body.appendChild(logoutButton);
