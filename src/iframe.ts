@@ -1,11 +1,11 @@
 import { Handler, Utils, OAuth2Provider, OpenIDProvider } from '@salte-auth/salte-auth';
 
 export class IFrame extends Handler {
-  public get name() {
+  public get name(): string {
     return 'iframe';
   }
 
-  public get auto() {
+  public get auto(): boolean {
     return true;
   }
 
