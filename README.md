@@ -1,10 +1,10 @@
 <h2 align="center">
   <div>
     <a href="https://github.com/salte-auth/iframe">
-      <img height="190px" src="https://raw.githubusercontent.com/salte-auth/logos/master/images/logo.svg?sanitize=true">
+      <img height="190px" src="https://raw.githubusercontent.com/salte-auth/logos/main/images/logo.svg?sanitize=true">
       <br>
       <br>
-      <img height="50px" src="https://raw.githubusercontent.com/salte-auth/logos/master/images/%40salte-auth/iframe.svg?sanitize=true">
+      <img height="50px" src="https://raw.githubusercontent.com/salte-auth/logos/main/images/%40salte-auth/iframe.svg?sanitize=true">
     </a>
   </div>
 </h2>
@@ -72,11 +72,11 @@ _These are issues that we know about, but don't have a clear fix for!_
 [npm-downloads-image]: https://img.shields.io/npm/dm/@salte-auth/iframe.svg?style=flat
 [npm-url]: https://npmjs.org/package/@salte-auth/iframe
 
-[github-actions-image]: https://github.com/salte-auth/iframe/actions/workflows/ci.yml/badge.svg?branch=master 
+[github-actions-image]: https://github.com/salte-auth/iframe/actions/workflows/ci.yml/badge.svg?branch=main 
 [github-actions-url]: https://github.com/salte-auth/iframe/actions/workflows/ci.yml
 
-[coveralls-image]: https://img.shields.io/coveralls/salte-auth/iframe/master.svg
-[coveralls-url]: https://coveralls.io/github/salte-auth/iframe?branch=master
+[coveralls-image]: https://img.shields.io/coveralls/salte-auth/iframe/main.svg
+[coveralls-url]: https://coveralls.io/github/salte-auth/iframe?branch=main
 
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-url]: https://commitizen.github.io/cz-cli/
